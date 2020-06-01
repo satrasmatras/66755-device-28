@@ -483,6 +483,9 @@ body {
   color: rgba(var(--basic-black), 0.2);
 }
 
+.slider-controls-list {
+  list-style: none;
+}
 .slides-list {
   list-style: none;
 }
