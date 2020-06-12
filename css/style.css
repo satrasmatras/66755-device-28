@@ -83,10 +83,9 @@ img {
 }
 
 body {
-  min-width: 1240px;
-  max-height: 1240px;
+  min-width: 1440px;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   font-family: "Open Sans", "Arial", sans-serif;
@@ -216,7 +215,7 @@ body {
   padding: 0;
 
   width: 163px;
-  min-height: 35px;
+  height: 35px;
   margin-bottom: 22px;
 }
 .main-header-logo-svg {
@@ -229,7 +228,9 @@ body {
 .main-header-logo:active {
   opacity: 0.3;
 }
+
 .search-form {
+  display: flex;
   width: 440px;
 
   margin: 0;
@@ -249,11 +250,13 @@ body {
   min-width: 356px;
 
   margin: 0;
-  padding: 0;
-  padding-left: 35.5px;
+  padding: 14px;
+  padding-left: 40px;
+  padding-right: 0;
 
   background-color: transparent;
-  border: 2px solid transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
 }
 .search-form-input:hover {
   color: rgba(var(--basic-black), 0.6);
@@ -284,9 +287,15 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   color: rgb(var(--basic-black));
+  width: 84px;
+
 
   background-color: transparent;
   border: 2px solid rgb(var(--basic-black));
+
+  padding: 0;
+  margin: 0;
+  padding: 13px 15px;
 }
 .search-form-button:hover {
   color: rgb(var(--basic-white));
@@ -683,28 +692,62 @@ body {
 }
 /* Catalog title and breadcrumbs end*/
 
-.catalog-two-column-section {
+/*Catalog filter and card list*/
+
+.filter-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: stretch;
+  background-color: rgb(var(--basic-grey-light));
+}
+.catalog-two-column-section {
+  display: grid;
+  grid-template-columns: 328px 832px;
 }
 
-.catalog-filter-wrapper {
-  min-width: 360px;
+.filter-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  padding-right: 68px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  min-height: 70px;
+  background-color: rgb(var(--basic-filter-grey));
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.filter-form {
+  padding-left: 60px;
+  padding-right: 68px;
+  padding-top: 70px;
+}
+
+.sorting {
+  margin:0;
+  padding: 0;
+  min-height: 70px;
   display: flex;
   flex-direction: row;
-  background-color: rgb(var(--basic-grey-light));
+  justify-content: space-between;
 
+  padding-left: 72px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgb(var(--basic-grey-light));
 }
 
-.catalog-items-column-wrapper {
-  min-width: 872px;
-}
-.catalog-filter {
-  margin-left: auto;
-  padding-right: 68px;
-
-  background-color: rgb(var(--basic-grey-light));
+.items-section {
+  padding-top: 70px;
 }
 
 .filter-group {
@@ -721,21 +764,6 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
-}
-.filter-title {
-  display: block;
-  padding: 25px 0;
-
-  background-color: rgb(var(--basic-filter-grey));
-
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 20px;
-
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 .filter-legend {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -776,9 +804,7 @@ body {
 .filter-form .bluetooth-list {
   list-style: none;
 }
-.catalog-items-column {
-  width: 832px;
-}
+
 
 .catalog-list {
   padding: 0;
@@ -966,6 +992,8 @@ body {
 
 
 .sorting-title {
+  margin: 0;
+  padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -976,7 +1004,14 @@ body {
   text-transform: uppercase;
 }
 .sorting-properties-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   list-style: none;
+  margin: 0;
+  padding: 0;
+
 }
 .sorting-properties-link {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -998,6 +1033,11 @@ body {
 }
 
 .sorting-order-variants-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .sorting-order-variants-icon:not(.active) .icon-color{
