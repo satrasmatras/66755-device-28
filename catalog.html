@@ -9,12 +9,13 @@
 </head>
 
 <body class="page-body">
+
   <div class="container">
     <header class="main-header">
 
       <nav class="main-navigation">
 
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo header-top">
 
           <svg width="163" height="35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
@@ -39,7 +40,7 @@
           </form>
 
           <ul class="header-user-navigation-list">
-            <li class="header-user-navigation-item logged-in">
+            <li class="header-user-navigation-item login logged-in">
               <a class="header-user-navigation-link" href="">
                 <svg class="header-user-navigation-icon" width="13" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -49,12 +50,12 @@
                 Валентин Петухов
               </a>
             </li>
-            <li class="header-user-navigation-item">
-              <a class="header-user-navigation-link logout" href="">
+            <li class="header-user-navigation-item logout">
+              <a class="header-user-navigation-link" href="">
                 Выйти
               </a>
             </li>
-            <li class="header-user-navigation-item">
+            <li class="header-user-navigation-item compare">
               <a class="header-user-navigation-link" href="">
                 <svg class="header-user-navigation-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -64,7 +65,7 @@
                 Сравнить
               </a>
             </li>
-            <li class="header-user-navigation-item">
+            <li class="header-user-navigation-item cart">
               <a class="header-user-navigation-link" href="">
                 <svg class="header-user-navigation-icon" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)" fill="#231F20">
@@ -85,51 +86,52 @@
           </ul>
         </div>
 
-        <ul class="header-site-navigation-list">
-          <li class="header-site-navigation-item">
-            <a class="header-site-navigation-link" href="">Каталог товаров</a>
+        <ul class="header-bottom header-site-navigation-list">
+          <li class="header-site-navigation-item submenu-opener">
+            <a class="header-site-navigation-link" href="catalog.html">Каталог товаров</a>
             <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.7 9.9v2.2h-6.6v6.6H9.9v-6.6H3.3V9.9h6.6V3.3h2.2v6.6h6.6z" fill="#000" fill-opacity=".3" />
             </svg>
+
+            <section class="extra-navigation-section">
+              <h2 class="sr-only">Дополнительная навигация по сайту</h2>
+              <ul class="extra-navigation-list">
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="">Виртуальная реальность</a>
+                </li>
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="extra-navigation-list second">
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="">Фитнес-браслеты</a>
+                </li>
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="extra-navigation-list">
+                <li class="extra-navigation-item">
+                  <a class="extra-navigation-link" href="">Квадрокоптер</a>
+                </li>
+              </ul>
+            </section>
+
           </li>
-          <li class="header-site-navigation-item">
+          <li class="header-site-navigation-item delivery">
             <a class="header-site-navigation-link" href="">Доставка</a>
           </li>
-          <li class="header-site-navigation-item">
+          <li class="header-site-navigation-item warranty">
             <a class="header-site-navigation-link" href="">Гарантия</a>
           </li>
-          <li class="header-site-navigation-item">
+          <li class="header-site-navigation-item contacts">
             <a class="header-site-navigation-link" href="">Контакты</a>
           </li>
         </ul>
-
-        <section class="extra-navigation">
-          <h2 class="sr-only">Дополнительная навигация по сайту</h2>
-          <ul class="extra-navigation-list">
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="">Виртуальная реальность</a>
-            </li>
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="">Экшн-камеры</a>
-            </li>
-          </ul>
-          <ul class="extra-navigation-list">
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="">Фитнес-браслеты</a>
-            </li>
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="">Умные часы</a>
-            </li>
-          </ul>
-          <ul class="extra-navigation-list">
-            <li class="extra-navigation-item">
-              <a class="extra-navigation-link" href="">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </section>
 
       </nav>
 
