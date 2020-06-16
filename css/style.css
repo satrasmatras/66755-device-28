@@ -13,7 +13,7 @@
   --special-yellow-dark: 240, 197, 46;
   --special-yellow: 247, 226, 150;
   --special-green: 145, 201, 47;
-
+  --special-user-nagivation-icon: 255, 198, 0;
   --special-yellow-decoration-bar: 255, 198, 0;
 
   --status: 246, 218, 218;
@@ -102,8 +102,6 @@ body {
   padding: 0;
 }
 
-
-
 /* Header start*/
 .main-header {
   background-color: rgb(var(--special-yellow));
@@ -116,7 +114,7 @@ body {
   left: 0;
 
   width: 100%;
-  height: 20px;
+  height: 21px;
 
   background-color: rgb(var(--basic-white));
   z-index: 0;
@@ -126,6 +124,7 @@ body {
   /*min-height: 344px;*/
 }
 .main-navigation {
+  padding-top: 1px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -759,6 +758,8 @@ body {
 }
 
 .footer-user-navigation-list {
+  margin: 0;
+  padding: 0;
   min-width: 560px;
   display: flex;
   flex-direction: row;
@@ -768,8 +769,42 @@ body {
   list-style: none;
 }
 
+.footer-user-navigation-link svg {
+  margin-right: 5px;
+}
 .footer-user-navigation-item:not(:last-child) {
   margin-right: 40px;
+}
+.footer-user-navigation-item.login {
+  margin-right: 41px;
+}
+.footer-user-navigation-item.login .footer-user-navigation-icon {
+  margin-right: 7px;
+  padding-top: 2px;
+}
+.footer-user-navigation-item.login.logged-in .footer-user-navigation-icon {
+  margin-right: 9px;
+  padding-top: 2px;
+}
+
+.footer-user-navigation-item.login.logged-in {
+  margin-right: 24px;
+}
+.footer-user-navigation-item.logout {
+  margin-right: 39px;
+}
+.footer-user-navigation-item.compare {
+  margin-right: 43px;
+}
+.footer-user-navigation-item.compare .footer-user-navigation-icon {
+  padding-top: 3px;
+  margin-right: 7px;
+}
+.footer-user-navigation-item.cart {
+  margin-right: 0px;
+}
+.footer-user-navigation-item.cart .footer-user-navigation-icon {
+  margin-right: 8px;
 }
 .footer-user-navigation-link {
   color: rgba(var(--basic-white), 0.7);
@@ -782,21 +817,21 @@ body {
 }
 .footer-user-navigation-icon > path,
 .footer-user-navigation-icon > g {
-  fill: rgb(var(--special-yellow-dark));
+  fill: rgb(var(--special-user-nagivation-icon));
 }
 .footer-user-navigation-link:hover .icon-color,
 .footer-user-navigation-link:hover .icon-color {
-  fill: rgba(var(--special-yellow-dark), 0.6);
+  fill: rgba(var(--special-user-nagivation-icon), 0.6);
 }
 .footer-user-navigation-link:active .icon-color,
 .footer-user-navigation-link:active .icon-color {
-  fill: rgba(var(--special-yellow-dark), 0.3);
+  fill: rgba(var(--special-user-nagivation-icon), 0.3);
 }
 
 .footer-middle {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   margin-bottom: 67px;
 }
@@ -804,6 +839,7 @@ body {
   width: 300px;
   margin: 0;
   padding: 0;
+  margin-right: 68px;
 }
 .address p {
   margin: 0;
@@ -813,11 +849,13 @@ body {
 .footer-site-navigation-list {
   margin: 0;
   padding: 0;
-  min-width: 440px;
+  min-width: 588px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
+
+  flex-wrap: wrap;
 }
 
 .footer-site-navigation-item {
@@ -831,6 +869,11 @@ body {
   text-transform: uppercase;
 
   color: var(--basic-white);
+
+  margin-right: 33px;
+}
+.footer-user-navigation-item:last-child {
+  margin-right: 0px;
 }
 .footer-site-navigation-link {
   color: var(--basic-white);
@@ -843,6 +886,12 @@ body {
 }
 
 .tel {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -858,6 +907,8 @@ body {
 }
 .tel a {
   color: var(--basic-white);
+  margin-right: -4px;
+  margin-left: 4px;
 }
 
 .footer-bottom {
@@ -872,6 +923,9 @@ body {
   margin-top: 12px;
   background-color: rgb(var(--special-yellow-decoration-bar));
 }
+.socials-section {
+  min-width: 293px;
+}
 .socials-list {
   width: 240px;
 
@@ -881,6 +935,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
 }
 .socials-list-item {
