@@ -264,7 +264,7 @@ body {
 .search-form-input:focus {
   color: rgba(var(--basic-black), 1);
 
-  border-bottom: 2px solid var(--basic-black);
+  border-bottom: 2px solid rgb(var(--basic-black));
 }
 .search-form-input::placeholder {
   color: inherit;
