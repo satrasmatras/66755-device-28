@@ -418,34 +418,50 @@
       </section>
     </div>
 
-    <section class="send-message-form sr-only">
+    <section class="send-message-form">
       <h2 class="sr-only">Форма обратной связи</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
-        <p>
-          <label for="name-field">Ваше имя:</label>
-          <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required>
-        </p>
-        <p>
-          <label for="email-field">Ваш e-mail:</label>
-          <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
-        </p>
-        <p>
-          <label for="message-field">Текст письма:</label>
-          <textarea name="message" id="message-field" placeholder="В свободной форме" required></textarea>
-        </p>
-        <button type="submit">Отправить</button>
-      </form>
-      <button type="button">
-        <span class="sr-only">Закрыть</span>
-      </button>
+      <div class="modal-form-wrapper">
+        <form class="modal-message-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="form-input-group name-group">
+            <label class="form-input-label" for="name-field">Ваше имя:</label>
+            <input type="text" name="name" id="name-field" placeholder="Имя Фамилия" required>
+          </p>
+          <p class="form-input-group email-group">
+            <label class="form-input-label" for="email-field">Ваш e-mail:</label>
+            <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
+          </p>
+          <p class="form-input-group message-group">
+            <label class="form-input-label" for="message-field">Текст письма:</label>
+            <textarea name="message" id="message-field" rows="7" placeholder="В свободной форме" required></textarea>
+          </p>
+          <button class="form-submit button" type="submit">Отправить</button>
+        </form>
+        <button class="close-button">
+          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E"/>
+            <g>
+              <path d="M35.95 37.725L28 29.7625L20.05 37.725L18.275 35.95L26.2375 28L18.275 20.05L20.05 18.275L28 26.2375L35.95 18.2875L37.7125 20.05L29.7625 28L37.7125 35.95L35.95 37.725Z" fill="white"/>
+            </g>
+          </svg>
+      </div>
     </section>
 
-    <section class="map-modal sr-only">
+    <section class="map-modal">
       <h2 class="sr-only">Интерактивная карта</h2>
-      <img src="img/large-map.png" alt="Большая карта. Улица Строителей, 15" width="994" height="593">
-      <button type="button">
-        <span class="sr-only">Закрыть</span>
-      </button>
+      <div class="map-modal-wrapper">
+        <img class="map-modal-image" src="img/large-map.png" alt="Большая карта. Улица Строителей, 15" width="994" height="593">
+        <button class="close-button">
+          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27.5" cy="27.5" r="27.5" fill="#F0C52E"/>
+            <g>
+              <path d="M35.95 37.725L28 29.7625L20.05 37.725L18.275 35.95L26.2375 28L18.275 20.05L20.05 18.275L28 26.2375L35.95 18.2875L37.7125 20.05L29.7625 28L37.7125 35.95L35.95 37.725Z" fill="white"/>
+            </g>
+          </svg>
+
+          <span class="sr-only">Закрыть</span>
+        </button>
+      </div>
+
     </section>
 
     </div>
