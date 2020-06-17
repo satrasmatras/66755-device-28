@@ -366,7 +366,8 @@ body {
   background-color: rgb(var(--basic-black));
 }
 
-.search-form-input:focus + .search-form-button {
+.search-form-input:focus + .search-form-button,
+.search-form-button:hover {
   display: block;
 }
 
