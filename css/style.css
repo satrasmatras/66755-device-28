@@ -399,6 +399,8 @@ body {
   flex-direction: row;
   padding-top: 33px;
   padding-bottom: 40px;
+
+  z-index: 100;
 }
 
 .extra-navigation-list {
@@ -447,9 +449,26 @@ body {
 
 /*Slider section*/
 .slider-section {
+  position: relative;
   margin-bottom: 96px;
+  min-height: 493px;
 }
+
+.slider-section::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 114px;
+  background-color: rgb(var(--special-yellow));
+}
+
 .slider-controls-list {
+  position: absolute;
+  top: 320px;
+  right: 60px;
+
   padding: 0;
   margin: 0;
 
@@ -458,6 +477,25 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+}
+
+.slider-controls-button {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: transparent;
+  background-image: url("../img/slider-button-off.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.slider-controls-button.active {
+  background-image: url("../img/slider-button-on.svg");
 }
 
 .slider-controls-item {
@@ -470,17 +508,58 @@ body {
 .slides-list {
   padding: 0;
   margin: 0;
+  counter-reset: my-awesome-counter;
 }
 .slides-list-item {
+  display: none;
+  counter-increment: my-awesome-counter;
+}
+.slides-list-item.active {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.slides-list-item::before {
+  content: "0" counter(my-awesome-counter);
+  position: absolute;
+  top: -32px;
+  right: 47px;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 219px;
+  text-transform: uppercase;
+
+  color: rgb(var(--basic-white));
+}
+.slides-list-item.slide-1::before {
+  content: "01"
+}
+.slides-list-item.slide-2::before {
+  content: "02"
+}
+.slides-list-item.slide-3::before {
+  content: "03"
+}
+
+
 .slider-list-item-image-wrapper {
   width: 560px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin-top: -13px;
+}
+.slides-list-item.slide-2 .slider-list-item-image-wrapper {
+  margin-left: 9px;
+  margin-top: 10px;
+}
+.slides-list-item.slide-3 .slider-list-item-image-wrapper {
+  margin-left: 13px;
 }
 .slider-list-item-content {
   width: 560px;
@@ -488,6 +567,8 @@ body {
   padding-right: 60px;
   display: flex;
   flex-direction: column;
+  padding-top: 78px;
+
 }
 
 .slider-controls-list {
@@ -497,19 +578,30 @@ body {
   list-style: none;
 }
 .slide-heading {
+  position: relative;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
 }
+.slide-heading::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -59px;
+  width: 100px;
+  height: 7px;
+  background-color: rgb(var(--basic-white));
+
+}
 .slide-text {
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 53px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -519,7 +611,7 @@ body {
 .slides-list-item .button {
   width: fit-content;
   width: -moz-fit-content;
-  margin-bottom: 60px;
+  margin-bottom: 52px;
   display: inline-block;
 }
 
@@ -532,7 +624,7 @@ body {
   flex-wrap: wrap;
 }
 .slide-features-list-item-wrapper {
-  margin-right: 60px;
+  margin-right: 62px;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -1497,7 +1589,12 @@ body {
   height: 62px;
 }
 
+.populars-list-section {
+  margin-bottom: 155px;
+}
 .populars-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .populars-list-link {
@@ -1509,6 +1606,32 @@ body {
   letter-spacing: 0.05em;
 
   color: rgb(var(--basic-black));
+}
+.populars-list-item-heading {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+.populars-list-item-heading.letterspacing-none {
+  letter-spacing: normal;
+}
+.populars-list-link:hover .populars-list-icon-wrapper {
+  background-color: rgb(var(--special-yellow-dark));
+}
+.populars-list-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: rgb(var(--special-yellow));
+
+  margin-bottom: 38px;
 }
 
 .populars-list-link:active {
