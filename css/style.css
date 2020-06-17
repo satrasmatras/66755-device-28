@@ -1395,7 +1395,7 @@ body {
   width: 100%;
   height: 380px;
   opacity: 0;
-  background-color: rgba(var(--basic-white), 0.7);
+  background-color: rgba(var(--basic-grey-light), 0.7);
   transition: 0.15s opacity;
 }
 
