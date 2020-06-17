@@ -1662,11 +1662,11 @@ body {
   background-color: rgb(var(--basic-modal-form-input-hover-gray));
 }
 
-/*.form-input-group input:invalid,*/
-/*.form-input-group textarea:invalid*/
-/*{*/
-/*  background-color: rgb(var(--status));*/
-/*}*/
+.form-input-group input:invalid,
+.form-input-group textarea:invalid
+{
+  background-color: rgb(var(--status));
+}
 
 .form-input-group input:focus,
 .form-input-group textarea:focus
