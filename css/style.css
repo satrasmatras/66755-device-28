@@ -1558,9 +1558,11 @@ body {
   background-color: rgb(var(--basic-pagination-button-hover));
 }
 
+
+
 .map-modal {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -1570,7 +1572,8 @@ body {
   z-index: 9999;
 }
 .send-message-form {
-  position: absolute;
+  visibility: hidden;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -1589,7 +1592,9 @@ body {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 
 }
-
+.visible {
+  visibility: visible;
+}
 .modal-message-form {
   display: flex;
   flex-direction: row;

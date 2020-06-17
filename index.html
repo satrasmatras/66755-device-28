@@ -418,7 +418,7 @@
       </section>
     </div>
 
-    <section class="send-message-form">
+    <section class="send-message-form visible">
       <h2 class="sr-only">Форма обратной связи</h2>
       <div class="modal-form-wrapper">
         <form class="modal-message-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -446,7 +446,7 @@
       </div>
     </section>
 
-    <section class="map-modal">
+    <section class="map-modal visible">
       <h2 class="sr-only">Интерактивная карта</h2>
       <div class="map-modal-wrapper">
         <img class="map-modal-image" src="img/large-map.png" alt="Большая карта. Улица Строителей, 15" width="994" height="593">
@@ -587,7 +587,36 @@
     </div>
 
   </footer>
+  <script>
+      const mapModal = document.querySelector('.map-modal');
+      const messageFormModal = document.querySelector('.send-message-form');
 
+      const mapModalCloseButton = mapModal.querySelector('.close-button');
+      const messageFormModalCloseButton = messageFormModal.querySelector('.close-button');
+
+      mapModalCloseButton.addEventListener('click', () => {
+          mapModal.classList.remove('visible');
+      })
+
+      messageFormModalCloseButton.addEventListener('click', () => {
+          messageFormModal.classList.remove('visible');
+      })
+
+      const messageFormButton = document.querySelector('.about-us-section .button')
+
+      messageFormButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          messageFormModal.classList.add('visible');
+      })
+
+      const mapModalShowButton = document.querySelector('.contacts-section .button')
+
+      mapModalShowButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          mapModal.classList.add('visible');
+      })
+
+  </script>
 </body>
 
 </html>
