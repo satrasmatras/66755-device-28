@@ -167,6 +167,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -381,6 +382,7 @@ body {
 .header-site-navigation-item.submenu-opener:hover .extra-navigation-section,
 .extra-navigation-section:hover {
   display: flex;
+  flex-wrap: wrap;
 }
 .extra-navigation-section {
   display: none;
@@ -853,6 +855,8 @@ body {
 
   margin-bottom: 41px;
   padding-top: 58px;
+
+  word-break: break-word;
 }
 
 .contacts-heading::before {
@@ -929,6 +933,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-self: flex-start;
+  flex-wrap: wrap;
 
   list-style: none;
 }
@@ -1165,6 +1170,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .breadcrumbs-list-item {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -1226,6 +1232,7 @@ body {
 
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  word-break: break-word;
 }
 .filter-form {
   padding-left: 60px;
@@ -1277,6 +1284,8 @@ body {
 
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  word-break: break-word;
 }
 .sorting-properties-list {
   min-width: 460px;
@@ -1287,6 +1296,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 .sorting-properties-item {
   margin-right: 30px;
@@ -1322,6 +1332,7 @@ body {
   padding: 0;
   padding-left: 7px;
   list-style: none;
+  flex-wrap: wrap;
 }
 .sorting-order-variants-icon:not(.active) .icon-color{
   fill: rgba(var(--basic-black), 0.2);
@@ -1911,6 +1922,7 @@ body {
   font-size: 47px;
   line-height: 58px;
 
+  word-break: break-word;
   letter-spacing: 0.2em;
 }
 
@@ -1960,6 +1972,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .pagination-page-number-item {
   margin-right: 30px;
