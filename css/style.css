@@ -1267,14 +1267,17 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  margin-bottom: 36px;
+  margin-bottom: 39px;
 }
 .filter-group.bluetooth {
-  margin-bottom: 49px;
+  margin-bottom: 46px;
 }
 .filter-list {
   margin: 0;
   padding: 0;
+}
+.filter-list.bluetooth-list {
+  padding-top: 3px;
 }
 .sorting-title {
   min-width: 160px;
@@ -1353,8 +1356,7 @@ body {
 .filter-list-item {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
-
+  margin-bottom: 19px;
 }
 .filter-list-item:last-child {
   margin-bottom: 0;
@@ -1366,7 +1368,9 @@ body {
 }
 .check__box {
   position: absolute;
-  margin-left: -40px;
+
+  margin-left: -42px;
+  margin-top: -1px;
 
   width: 24px;
   height: 24px;
@@ -1421,6 +1425,7 @@ body {
 .radio__box {
   position: absolute;
   margin-left: -40px;
+  margin-top: -2px;
 
   width: 24px;
   height: 24px;
@@ -1499,7 +1504,7 @@ body {
 
 .filter-group.price-range {
   height: 107px;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .filter-group.price-range .filter-legend {
@@ -1522,6 +1527,8 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+  margin-top: 3px;
 }
 .price-controls input {
   width: 50px;
@@ -1601,6 +1608,9 @@ body {
 
 .filter-form .colors-list {
   list-style: none;
+
+  padding-left: 2px;
+  padding-top: 2px;
 }
 .filter-form .bluetooth-list {
   list-style: none;
