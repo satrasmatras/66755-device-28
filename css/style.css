@@ -656,6 +656,9 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
+.slide-3 .slide-features-list-item-wrapper {
+  margin-right: 27px;
+}
 .slide-features-list-item-wrapper:last-child {
   margin-right: 0;
 }
