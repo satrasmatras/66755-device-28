@@ -1190,8 +1190,8 @@ body {
 .breadcrumbs-list-item:not(:last-of-type)::after {
   position: absolute;
   content: url("../img/arrow-nav.svg");
-  right: -21px;
-  top: 3px;
+  right: -25px;
+  top: 2px;
 }
 
 .breadcrumbs-list-link {
