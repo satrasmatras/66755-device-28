@@ -2142,7 +2142,7 @@ body {
   font-size: 14px;
   line-height: 19px;
 
-  color: rgba(var(--basic-black), 0.4);
+  color: rgba(var(--basic-black), 1);
 
   background-color: rgb(var(--basic-modal-form-input-gray));
   padding-left: 20px;
