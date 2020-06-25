@@ -281,6 +281,7 @@ body {
 .search-form {
   position: relative;
   display: flex;
+  align-self: flex-start;
   width: 440px;
 
   margin: 0;
