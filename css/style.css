@@ -2178,19 +2178,20 @@ body {
 {
   background-color: rgb(var(--basic-modal-form-input-hover-gray));
 }
-
-.form-input-group input:invalid,
-.form-input-group textarea:invalid
-{
-  background-color: rgb(var(--status));
-}
-
 .form-input-group input:focus,
 .form-input-group textarea:focus
 {
   border: 2px solid rgb(var(--special-yellow-dark));
   background-color: rgb(var(--basic-white));
 }
+/* Верну на главе с JS */
+/*.form-input-group input:invalid,*/
+/*.form-input-group textarea:invalid*/
+/*{*/
+/*  background-color: rgb(var(--status));*/
+/*}*/
+
+
 
 .message-group {
   width: 100%;
