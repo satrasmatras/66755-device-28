@@ -576,7 +576,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: -13px;
 }
 .slides-list-item.slide-2 .slider-list-item-image-wrapper {
