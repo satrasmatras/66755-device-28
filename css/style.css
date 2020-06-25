@@ -1222,6 +1222,10 @@ body {
   display: grid;
   grid-template-columns: 328px 832px;
 }
+.overflow-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 .catalog-two-column-section::before {
   position: absolute;
