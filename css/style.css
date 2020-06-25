@@ -343,7 +343,7 @@ body {
 }
 
 .search-form-button {
-  display: none;
+  visibility: hidden;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -373,7 +373,7 @@ body {
 
 .search-form-input:focus + .search-form-button,
 .search-form-button:hover {
-  display: block;
+  visibility: visible;
 }
 
 
