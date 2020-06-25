@@ -112,6 +112,8 @@ body {
   position: relative;
   background-color: rgb(var(--special-yellow));
   padding: 0 60px;
+
+  margin-top: 19px;
 }
 .main-header::before {
   position: absolute;
