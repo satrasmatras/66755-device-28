@@ -469,7 +469,8 @@ body {
 
 .slider-controls-list {
   position: absolute;
-  top: 320px;
+
+  bottom: 152px;
   right: 60px;
 
   padding: 0;
