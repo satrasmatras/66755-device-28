@@ -1903,7 +1903,7 @@ body {
 .services-slide-image-wrapper {
   width: 174px;
   height: 206px;
-  align-self: center;
+  align-self: flex-start;
 
   background-repeat: no-repeat;
   background-position: top right;
