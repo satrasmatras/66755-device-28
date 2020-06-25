@@ -1416,8 +1416,8 @@ body {
 .check__box {
   position: absolute;
 
-  margin-left: -42px;
-  margin-top: -1px;
+  margin-left: -40px;
+  margin-top: 0px;
 
   width: 24px;
   height: 24px;
