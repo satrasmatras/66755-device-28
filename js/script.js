@@ -7,17 +7,73 @@ try {
 }
 
 // Form
-const messageForm = document.querySelector('.send-message-form');
-const messageFormShowButton = document.querySelector('.contacts-section .button');
-const messageFormCloseButton = messageForm.querySelector('.close-button');
+const messageModal = document.querySelector('.send-message-form');
+const messageModalShowButton = document.querySelector('.contacts-section .button');
+const messageModalCloseButton = messageModal.querySelector('.close-button');
 
-messageFormShowButton.addEventListener('click', event => {
-  event.preventDefault();
-  messageForm.classList.add('visible');
+const name = messageModal.querySelector('[name=name]');
+const email = messageModal.querySelector('[name=email]');
+const message = messageModal.querySelector('[name=message]');
+
+const form = messageModal.querySelector('.modal-message-form');
+
+const closeModal = (modalElement) => {
+  if (modalElement.classList.contains('visible')){
+    modalElement.classList.remove('visible');
+    modalElement.classList.remove('modal-error');
+  }
+}
+const escapeListener = (modalElement) => (event) => {
+  if (event.keyCode === 27) {
+    event.preventDefault();
+    closeModal(modalElement);
+  }
+}
+const messageFormEscapeListener = escapeListener(messageModal);
+
+form.addEventListener('submit', (event) => {
+  if (!name.value || !email.value || !message.value){
+    event.preventDefault();
+    messageModal.classList.remove('modal-error');
+    messageModal.offsetWidth = messageModal.offsetWidth;
+    messageModal.classList.add('modal-error');
+  }
+  else {
+    if (isLocalStorageSupport){
+      localStorage.setItem(name.name, name.value);
+      localStorage.setItem(email.name, email.value);
+    }
+  }
+
 })
 
-messageFormCloseButton.addEventListener('click', () => {
-  messageForm.classList.remove('visible');
+messageModalShowButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  messageModal.classList.add('visible');
+
+  window.addEventListener('keydown', messageFormEscapeListener)
+
+  if (isLocalStorageSupport){
+    const lsNameValue = localStorage.getItem(name.name);
+    const lsEmailValue = localStorage.getItem(email.name);
+
+    if (lsNameValue){
+      name.value = lsNameValue;
+      email.focus();
+    }
+    if (lsEmailValue){
+      email.value = lsEmailValue;
+      message.focus();
+    }
+  } else {
+      name.focus();
+  }
+
+})
+
+messageModalCloseButton.addEventListener('click', () => {
+  messageModal.classList.remove('visible');
+  messageModal.classList.remove('modal-error');
 })
 
 // Map
