@@ -22,3 +22,33 @@ promoSliderButtons.forEach(
     })
   })
 
+// Services Slider
+const servicesSliderButtons = document.querySelectorAll(".services-navigation-link");
+
+let currentServicesSlide = document.querySelector(".services-slide.active");
+let currentServicesSlideButton = document.querySelector(".services-navigation-item.active .services-navigation-link");
+
+// initialize
+servicesSliderButtons.forEach(
+  sliderButton => {
+    sliderButton.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      let slideNumber = sliderButton.dataset.slide;
+      let slide = document.querySelector(`.services-slide.slide-${slideNumber}`);
+
+      currentServicesSlide.classList.toggle("active");
+      let currentServicesSlideButtonAncestor = currentServicesSlideButton.parentElement;
+      currentServicesSlideButtonAncestor.classList.toggle("active")
+
+
+      currentServicesSlide = slide
+      currentServicesSlideButton = sliderButton
+
+      slide.classList.toggle("active")
+
+      currentServicesSlideButtonAncestor = currentServicesSlideButton.parentElement;
+      currentServicesSlideButtonAncestor.classList.toggle("active")
+    })
+  })
+
