@@ -2077,26 +2077,26 @@ body {
   color: rgba(var(--basic-black), 0.3);
   background-color: rgb(var(--basic-pagination-button-hover));
 }
-
-
-
-.map-modal {
-  visibility: hidden;
+.modal {
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+.map-modal {
+  top: 120px;
+  bottom: auto;
 
-  min-width: 994px;
+  width: 994px;
   min-height: 593px;
   z-index: 9999;
 }
 .send-message-form {
-  visibility: hidden;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 120px;
+  bottom: auto;
 
   z-index: 9999;
 
@@ -2112,7 +2112,9 @@ body {
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 .visible {
-  visibility: visible;
+  display: block;
+  animation: bounce 0.6s;
+}
 }
 .modal-message-form {
   display: flex;
