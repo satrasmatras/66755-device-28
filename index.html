@@ -601,35 +601,7 @@
     </div>
 
   </footer>
-  <script>
-      const mapModal = document.querySelector('.map-modal');
-      const messageFormModal = document.querySelector('.send-message-form');
-
-      const mapModalCloseButton = mapModal.querySelector('.close-button');
-      const messageFormModalCloseButton = messageFormModal.querySelector('.close-button');
-
-      mapModalCloseButton.addEventListener('click', () => {
-          mapModal.classList.remove('visible');
-      })
-
-      messageFormModalCloseButton.addEventListener('click', () => {
-          messageFormModal.classList.remove('visible');
-      })
-
-      const messageFormButton = document.querySelector('.contacts-section .button')
-
-      messageFormButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          messageFormModal.classList.add('visible');
-      })
-
-      const mapModalShowButton = document.querySelector('.contacts-section .contacts-map')
-
-      mapModalShowButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          mapModal.classList.add('visible');
-      })
-
+  <script src="./js/script.js">
   </script>
 </body>
 
