@@ -81,9 +81,12 @@ const mapModal = document.querySelector('.map-modal');
 const mapModalShowButton = document.querySelector('.contacts-section .contacts-map');
 const mapModalCloseButton = mapModal.querySelector('.close-button');
 
+const mapEscapeListener = escapeListener(mapModal);
 mapModalShowButton.addEventListener('click', event => {
   event.preventDefault();
   mapModal.classList.add('visible');
+
+  window.addEventListener('keydown', mapEscapeListener);
 })
 mapModalCloseButton.addEventListener('click', () => {
   mapModal.classList.remove('visible');
