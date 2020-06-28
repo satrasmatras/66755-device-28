@@ -1,3 +1,11 @@
+let isLocalStorageSupport = true;
+
+try {
+  localStorage.getItem('something');
+} catch (err) {
+  isLocalStorageSupport = false
+}
+
 // Form
 const messageForm = document.querySelector('.send-message-form');
 const messageFormShowButton = document.querySelector('.contacts-section .button');
