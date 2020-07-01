@@ -32,8 +32,16 @@ const escapeListener = (modalElement) => (event) => {
 const messageFormEscapeListener = escapeListener(messageModal);
 
 form.addEventListener('submit', (event) => {
-  if (!name.value || !email.value || !message.value){
+
+  const isNameValid = !!name.value;
+  const isEmailValid = !!email.value;
+  const isMessageValid = !!message.value;
+
+  const isFormValid = isNameValid && isEmailValid && isMessageValid;
+
+  if (!isFormValid){
     event.preventDefault();
+
     messageModal.classList.remove('modal-error');
     messageModal.offsetWidth = messageModal.offsetWidth;
     messageModal.classList.add('modal-error');
@@ -98,7 +106,6 @@ const promoSliderButtons = document.querySelectorAll(".slider-controls-button");
 let currentPromoSlide = document.querySelector(".slides-list-item.active");
 let currentPromoButton = document.querySelector(".slider-controls-button.active");
 
-// initialize
 promoSliderButtons.forEach(
   sliderButton => {
     sliderButton.addEventListener('click', () => {
@@ -122,7 +129,6 @@ const servicesSliderButtons = document.querySelectorAll(".services-navigation-li
 let currentServicesSlide = document.querySelector(".services-slide.active");
 let currentServicesSlideButton = document.querySelector(".services-navigation-item.active .services-navigation-link");
 
-// initialize
 servicesSliderButtons.forEach(
   sliderButton => {
     sliderButton.addEventListener('click', (event) => {
@@ -134,7 +140,6 @@ servicesSliderButtons.forEach(
       currentServicesSlide.classList.toggle("active");
       let currentServicesSlideButtonAncestor = currentServicesSlideButton.parentElement;
       currentServicesSlideButtonAncestor.classList.toggle("active")
-
 
       currentServicesSlide = slide
       currentServicesSlideButton = sliderButton
