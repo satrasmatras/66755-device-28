@@ -2097,9 +2097,17 @@ body {
   top: 120px;
   bottom: auto;
 
-  width: 994px;
-  min-height: 593px;
+  width: 960px;
+  min-height: 559px;
   z-index: 9999;
+}
+.map-modal-wrapper {
+  width: 960px;
+  height: 559px;
+  overflow-y: hidden;
+}
+.map-wrapper {
+  min-height: 559px;
 }
 .send-message-form {
   top: 120px;
