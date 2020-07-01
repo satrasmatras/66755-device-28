@@ -22,6 +22,10 @@
   --special-yellow-decoration-bar: 255, 198, 0;
 
   --status: 246, 218, 218;
+
+  --modal-box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  --toggle-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+
 }
 
 .sr-only {
@@ -1605,7 +1609,7 @@ body {
   border: 8px solid rgb(var(--basic-white));
   border-radius: 50%;
 
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--toggle-box-shadow);
 
   cursor: pointer;
 }
@@ -2100,6 +2104,8 @@ body {
   width: 960px;
   min-height: 559px;
   z-index: 9999;
+
+  box-shadow: var(--modal-box-shadow);
 }
 .map-modal-wrapper {
   width: 960px;
@@ -2124,7 +2130,7 @@ body {
   min-height: 550px;
 
   background-color: rgb(var(--basic-white));
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--modal-box-shadow);
 }
 
 @keyframes bounce {
