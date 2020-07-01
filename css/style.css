@@ -2111,6 +2111,7 @@ body {
   background-color: rgb(var(--basic-white));
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
+
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2224,12 +2225,12 @@ body {
   border: 2px solid rgb(var(--special-yellow-dark));
   background-color: rgb(var(--basic-white));
 }
-/* Верну на главе с JS */
-/*.form-input-group input:invalid,*/
-/*.form-input-group textarea:invalid*/
-/*{*/
-/*  background-color: rgb(var(--status));*/
-/*}*/
+
+.form-input-group input:invalid,
+.form-input-group textarea:invalid
+{
+  background-color: rgb(var(--status));
+}
 
 
 
