@@ -811,8 +811,7 @@ body {
 
   cursor: pointer;
 }
-.button::before,
-.services-navigation-item:not(.active) .services-navigation-link::before {
+.button::before {
   display: block;
 
   content: "";
@@ -1937,16 +1936,25 @@ body {
 .services-navigation-item:nth-child(2) {
   margin-bottom: 24px;
 }
-.services-navigation-item.active::after {
+.services-navigation-link.active::before,
+.services-navigation-link:active::before {
+  display: none;
+}
+.services-navigation-link.active::after,
+.services-navigation-link:active::after {
+  position: absolute;
+  left: calc(100%);
+  top: 0;
   content: "";
   display: block;
   margin-left: -1px;
-  height: 40px;
-  width: 100px;
+  height: 100%;
+  width: calc(279px - 100%);
   flex-grow: 1;
   background-color: rgb(var(--basic-black));
 }
-.services-navigation-item.active .services-navigation-link {
+.services-navigation-link.active,
+.services-navigation-link:active {
   color: rgb(var(--special-yellow));
 
   background-color: rgb(var(--basic-black));

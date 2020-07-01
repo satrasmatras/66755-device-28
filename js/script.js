@@ -127,7 +127,7 @@ promoSliderButtons.forEach(
 const servicesSliderButtons = document.querySelectorAll(".services-navigation-link");
 
 let currentServicesSlide = document.querySelector(".services-slide.active");
-let currentServicesSlideButton = document.querySelector(".services-navigation-item.active .services-navigation-link");
+let currentServicesSlideButton = document.querySelector(".services-navigation-link.active");
 
 servicesSliderButtons.forEach(
   sliderButton => {
@@ -138,16 +138,13 @@ servicesSliderButtons.forEach(
       let slide = document.querySelector(`.services-slide.slide-${slideNumber}`);
 
       currentServicesSlide.classList.toggle("active");
-      let currentServicesSlideButtonAncestor = currentServicesSlideButton.parentElement;
-      currentServicesSlideButtonAncestor.classList.toggle("active")
+      currentServicesSlideButton.classList.toggle("active");
 
       currentServicesSlide = slide
       currentServicesSlideButton = sliderButton
 
       slide.classList.toggle("active")
-
-      currentServicesSlideButtonAncestor = currentServicesSlideButton.parentElement;
-      currentServicesSlideButtonAncestor.classList.toggle("active")
+      sliderButton.classList.toggle("active");
     })
   })
 
