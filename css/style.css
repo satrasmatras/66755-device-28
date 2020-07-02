@@ -2101,16 +2101,27 @@ body {
   top: 120px;
   bottom: auto;
 
-  width: 960px;
+  width: 961px;
   min-height: 559px;
   z-index: 9999;
 
   box-shadow: var(--modal-box-shadow);
 }
 .map-modal-wrapper {
-  width: 960px;
+  position: relative;
+  width: 961px;
   height: 559px;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
+}
+.map-wrapper ymaps {
+  z-index: 2;
+}
+.map-modal-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: 1;
 }
 .map-wrapper {
   min-height: 559px;
