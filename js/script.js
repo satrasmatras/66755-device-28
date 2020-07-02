@@ -179,10 +179,6 @@ function init () {
       iconImageOffset: [-40, -120]
     });
 
-
-  const mapImage = document.querySelector('.map-modal-image');
-  mapImage.classList.add('sr-only');
-
   // myMap.container.fitToViewport();
   myMap.geoObjects
     .add(myPlacemark)
