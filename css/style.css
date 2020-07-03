@@ -650,6 +650,7 @@ body {
   width: -moz-fit-content;
   margin-bottom: 52px;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .slide-features-list {
