@@ -1927,7 +1927,7 @@ body {
 
 .services-navigation-link {
   position: relative;
-  display: inline-block;
+  display: block;
   text-align: center;
 
   font-family: "Gilroy", "Arial", sans-serif;
@@ -1965,9 +1965,9 @@ body {
   top: 0;
   content: "";
   display: block;
-  margin-left: -1px;
+  margin-left: -2px;
   height: 100%;
-  width: calc(279px - 100%);
+  width: calc(279px - 100% + 1px);
   flex-grow: 1;
   background-color: rgb(var(--basic-black));
 }
