@@ -1245,16 +1245,23 @@ body {
 }
 
 .footer-bottom {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 460px;
 }
 
-.decorate-bar {
+.footer-bottom::before {
+  position: absolute;
+  content: "";
+
+  top: 11px;
+  left: 0px;
+
   width: 80px;
   height: 7px;
 
-  margin-top: 12px;
   background-color: rgb(var(--special-yellow-decoration-bar));
 }
 
