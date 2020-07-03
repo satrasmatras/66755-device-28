@@ -683,6 +683,9 @@ body {
 
   letter-spacing: 0.1em;
 }
+.slide-1 .last {
+  margin-left: 4px;
+}
 .slide-description-value {
   margin: 0;
   margin-bottom: 15px;
