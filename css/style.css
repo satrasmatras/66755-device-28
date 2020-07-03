@@ -2020,17 +2020,11 @@ body {
 .logotypes-list {
   list-style: none;
 }
-.logotypes-list-logo.logo1:hover {
-  background-image: url("../img/logo-1-hover.png");
+.logotypes-list-link {
+  filter: grayscale(1) opacity(0.2);
 }
-.logotypes-list-logo.logo2:hover {
-  background-image: url("../img/logo-2-hover.png");
-}
-.logotypes-list-logo.logo3:hover {
-  background-image: url("../img/logo-3-hover.png");
-}
-.logotypes-list-logo.logo4:hover {
-  background-image: url("../img/logo-4-hover.png");
+.logotypes-list-link:hover {
+  filter: none;
 }
 
 
