@@ -3,7 +3,7 @@ let isLocalStorageSupport = true;
 try {
   localStorage.getItem('something');
 } catch (err) {
-  isLocalStorageSupport = false
+  isLocalStorageSupport = false;
 }
 
 // Form
@@ -18,7 +18,7 @@ const message = messageModal.querySelector('[name=message]');
 const form = messageModal.querySelector('.modal-message-form');
 
 const closeModal = (modalElement) => {
-  if (modalElement.classList.contains('visible')){
+  if (modalElement.classList.contains('visible')) {
     modalElement.classList.remove('visible');
     modalElement.classList.remove('modal-error');
   }
@@ -39,15 +39,14 @@ form.addEventListener('submit', (event) => {
 
   const isFormValid = isNameValid && isEmailValid && isMessageValid;
 
-  if (!isFormValid){
+  if (!isFormValid) {
     event.preventDefault();
 
     messageModal.classList.remove('modal-error');
     messageModal.offsetWidth = messageModal.offsetWidth;
     messageModal.classList.add('modal-error');
-  }
-  else {
-    if (isLocalStorageSupport){
+  } else {
+    if (isLocalStorageSupport) {
       localStorage.setItem(name.name, name.value);
       localStorage.setItem(email.name, email.value);
     }
@@ -59,22 +58,22 @@ messageModalShowButton.addEventListener('click', (event) => {
   event.preventDefault();
   messageModal.classList.add('visible');
 
-  window.addEventListener('keydown', messageFormEscapeListener)
+  window.addEventListener('keydown', messageFormEscapeListener);
 
-  if (isLocalStorageSupport){
+  if (isLocalStorageSupport) {
     const lsNameValue = localStorage.getItem(name.name);
     const lsEmailValue = localStorage.getItem(email.name);
 
-    if (lsNameValue){
+    if (lsNameValue) {
       name.value = lsNameValue;
       email.focus();
     }
-    if (lsEmailValue){
+    if (lsEmailValue) {
       email.value = lsEmailValue;
       message.focus();
     }
   } else {
-      name.focus();
+    name.focus();
   }
 
 })
@@ -120,8 +119,8 @@ promoSliderButtons.forEach(
 
       slide.classList.toggle("active");
       sliderButton.classList.toggle("active");
-    })
-  })
+    });
+  });
 
 // Services Slider
 const servicesSliderButtons = document.querySelectorAll(".services-navigation-link");
@@ -145,24 +144,24 @@ servicesSliderButtons.forEach(
 
       slide.classList.toggle("active")
       sliderButton.classList.toggle("active");
-    })
-  })
+    });
+  });
 
 // Яндекс карта
 let myMap;
 ymaps.ready(init);
 
-function init () {
+function init() {
   myMap = new ymaps.Map('map', {
     center: [55.686980, 37.529654], // Москва
     zoom: 16.5
   }, {
     searchControlProvider: 'yandex#search'
   }),
-  // Создаём макет содержимого.
-  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  ),
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
       hintContent: 'Device',
       balloonContent: 'г. Москва, ул. Строителей, 15'
@@ -181,5 +180,5 @@ function init () {
 
   // myMap.container.fitToViewport();
   myMap.geoObjects
-    .add(myPlacemark)
-}
+    .add(myPlacemark);
+};
