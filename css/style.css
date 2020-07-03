@@ -1267,7 +1267,7 @@ body {
 .filter-title::before {
   position: absolute;
 
-  width: calc(328px + 200%);
+  width: calc(328px + 500%);
   height: 100%;
   content: "";
 
