@@ -100,10 +100,10 @@ mapModalCloseButton.addEventListener('click', () => {
 })
 
 // Promo-slider
-const promoSliderButtons = document.querySelectorAll(".slider-controls-button");
+const promoSliderButtons = document.querySelectorAll('.slider-controls-button');
 
-let currentPromoSlide = document.querySelector(".slides-list-item.active");
-let currentPromoButton = document.querySelector(".slider-controls-button.active");
+let currentPromoSlide = document.querySelector('.slides-list-item.active');
+let currentPromoButton = document.querySelector('.slider-controls-button.active');
 
 promoSliderButtons.forEach(
   sliderButton => {
@@ -111,22 +111,22 @@ promoSliderButtons.forEach(
       let slideNumber = sliderButton.dataset.slide;
       let slide = document.querySelector(`.slides-list-item.slide-${slideNumber}`);
 
-      currentPromoSlide.classList.toggle("active");
-      currentPromoButton.classList.toggle("active");
+      currentPromoSlide.classList.toggle('active');
+      currentPromoButton.classList.toggle('active');
 
       currentPromoSlide = slide;
       currentPromoButton = sliderButton;
 
-      slide.classList.toggle("active");
-      sliderButton.classList.toggle("active");
+      slide.classList.toggle('active');
+      sliderButton.classList.toggle('active');
     });
   });
 
 // Services Slider
-const servicesSliderButtons = document.querySelectorAll(".services-navigation-link");
+const servicesSliderButtons = document.querySelectorAll('.services-navigation-link');
 
-let currentServicesSlide = document.querySelector(".services-slide.active");
-let currentServicesSlideButton = document.querySelector(".services-navigation-link.active");
+let currentServicesSlide = document.querySelector('.services-slide.active');
+let currentServicesSlideButton = document.querySelector('.services-navigation-link.active');
 
 servicesSliderButtons.forEach(
   sliderButton => {
@@ -136,14 +136,14 @@ servicesSliderButtons.forEach(
       let slideNumber = sliderButton.dataset.slide;
       let slide = document.querySelector(`.services-slide.slide-${slideNumber}`);
 
-      currentServicesSlide.classList.toggle("active");
-      currentServicesSlideButton.classList.toggle("active");
+      currentServicesSlide.classList.toggle('active');
+      currentServicesSlideButton.classList.toggle('active');
 
       currentServicesSlide = slide
       currentServicesSlideButton = sliderButton
 
-      slide.classList.toggle("active")
-      sliderButton.classList.toggle("active");
+      slide.classList.toggle('active')
+      sliderButton.classList.toggle('active');
     });
   });
 
