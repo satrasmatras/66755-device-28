@@ -158,7 +158,7 @@ function init() {
   }, {
     searchControlProvider: 'yandex#search'
   }),
-    // Создаём макет содержимого.
+
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
     ),
@@ -166,19 +166,12 @@ function init() {
       hintContent: 'Device',
       balloonContent: 'г. Москва, ул. Строителей, 15'
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
-      // Своё изображение иконки метки.
       iconImageHref: 'img/popular-2.svg',
-      // Размеры метки.
       iconImageSize: [86, 117],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
       iconImageOffset: [-40, -120]
     });
 
-  // myMap.container.fitToViewport();
   myMap.geoObjects
     .add(myPlacemark);
 };
