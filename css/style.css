@@ -2234,6 +2234,7 @@ body {
 
 .services-slide {
   display: none;
+  position: relative;
   min-height: 182px;
   padding-top: 75px;
 }
@@ -2253,29 +2254,27 @@ body {
 .slide-2 .services-slide-content {
   padding-bottom: 129px;
 }
-
-.services-slide-image-wrapper {
-  width: 174px;
-  height: 206px;
-  align-self: flex-start;
-
-  background-repeat: no-repeat;
-  background-position: top right;
+.services-slide::before {
+  position: absolute;
+  right: 0;
+  top: 75px;
 }
 
-.services-slide.slide-1 .services-slide-image-wrapper {
-  background-image: url("../img/delivery.svg");
-  margin-right: 2px;
-}
 
-.services-slide.slide-2 .services-slide-image-wrapper {
-  background-image: url("../img/warranty.svg");
-  margin-right: -16px;
-  margin-top: -18px;
+.services-slide.slide-1::before {
+  content: url("../img/delivery.svg");
+  top: 75px;
+  right: 2px;
 }
-
-.services-slide.slide-3 .services-slide-image-wrapper {
-  background-image: url("../img/credit.svg");
+.services-slide.slide-2::before {
+  content: url("../img/warranty.svg");
+  top: 57px;
+  right: -16px;
+}
+.services-slide.slide-3::before {
+  content: url("../img/credit.svg");
+  top: 52px;
+  right: 8px;
 }
 
 .service-heading {
