@@ -1607,8 +1607,6 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-
-  margin-top: 3px;
 }
 .price-controls input {
   width: 50px;
