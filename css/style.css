@@ -937,7 +937,7 @@ body {
 .main-footer {
   background-color: rgb(var(--basic-dark));
   color: rgb(var(--basic-white));
-  padding-bottom: 65px;
+  padding-bottom: 58px;
 }
 
 .main-footer-logo {
